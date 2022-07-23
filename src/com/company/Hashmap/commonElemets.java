@@ -6,28 +6,32 @@ import java.util.HashSet;
 
 public class commonElemets {
     public static void main(String[] args) {
-        int[] A = {2,1,4,10};//{1,2,2,1};
-        int[] B = {3,6,2,10,10};//{2,3,1,2};
-        ArrayList<Integer> op = new ArrayList<Integer>();
+        //int[] A = {2,1,4,10};//{1,2,2,1};
+        //int[] B = {3,6,2,10,10};//{2,3,1,2};
+        int[] A = {1,2,2,1};
+        int[] B = {2,3,1,2};
+        ArrayList<Integer> result = new ArrayList<>();
         HashMap<Integer, Integer> hmap = new HashMap<>();
-        for (int val: A){
-            if ( !hmap.containsKey(val) ) {
-                hmap.put( val, 1 );
-            }
-            else {
-                hmap.put( val, hmap.get(val) + 1 );
-            }
-        }
-
-        for(int val: B) {
-            if ( hmap.containsKey(val) && hmap.get(val) > 0 ) {
-                hmap.put( val, hmap.get(val) - 1 );
-                op.add(val);
-            }
-        }
-        for(int i=0;i<op.size();i++)
+        for(int i=0;i<A.length;i++)
         {
-            System.out.print(op.get(i)+" ");
+            if(hmap.containsKey(A[i]))
+            {
+                hmap.put(A[i],hmap.get(A[i])+1);
+            }
+            else
+            {
+                hmap.put(A[i],1);
+            }
         }
+        for(int i=0;i<B.length;i++)
+        {
+            if(hmap.containsKey(B[i]) && hmap.get(B[i])>0)
+            {
+                hmap.put(B[i],hmap.get(B[i])-1);
+                result.add(B[i]);
+            }
+        }
+        System.out.println(result);
+
     }
 }
