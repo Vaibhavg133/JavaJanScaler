@@ -5,9 +5,9 @@ import java.util.HashSet;
 
 public class K_occurences {
     public static void main(String[] args) {
-        int N = 5;
+        int N = 6;//5;
         int B = 2;
-        int[] C = {1,2,2,2,3,3};
+        int[] C ={1000000000, 1000000000, 999999999, 999999999, 999999998, 1};//{2,2,2,2};
         HashSet<Integer> set = new HashSet<>();
         HashMap<Integer,Integer> map = new HashMap<>();
         for(int i=0;i<C.length;i++)
@@ -22,12 +22,15 @@ public class K_occurences {
             }
             set.add(C[i]);
         }
-//        int sum=0;
-        for(int i : set)
+        int sum=0;
+        for(int i:set)
         {
-            //System.out.println(map.containsKey());
-            //System.out.println(map.);
+            System.out.println(i+":"+map.get(i));
+            if(map.get(i)==B)
+            {
+                sum=sum+i;
+            }
         }
-        //System.out.println(sum);
+        System.out.println(sum);
     }
 }
