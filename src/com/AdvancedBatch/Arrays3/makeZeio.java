@@ -1,4 +1,4 @@
-package com.AdnacedBatch.Arrays3;
+package com.AdvancedBatch.Arrays3;
 
 public class makeZeio {
     public static void main(String[] args) {

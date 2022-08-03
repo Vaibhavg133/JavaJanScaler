@@ -1,4 +1,4 @@
-package com.AdnacedBatch.Arrays3;
+package com.AdvancedBatch.Arrays3;
 
 import java.util.Arrays;
 

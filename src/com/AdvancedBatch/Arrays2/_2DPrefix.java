@@ -1,4 +1,4 @@
-package com.AdnacedBatch.Arrays2;
+package com.AdvancedBatch.Arrays2;
 
 public class _2DPrefix {
     public static void main(String[] args) {
