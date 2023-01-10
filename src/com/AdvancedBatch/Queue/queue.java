@@ -7,7 +7,7 @@ public class queue {
     {
         head=tail=null;
     }
-    void enqueue(int data)
+    void enqueue(String data)
     {
         Node myNode = new Node(data);
         if(this.tail==null)
@@ -34,11 +34,11 @@ public class queue {
             this.tail=null;
         }
     }
-    int getFront()
+    String getFront()
     {
         return this.head.data;
     }
-    int getLast()
+    String getLast()
     {
         return this.tail.data;
     }
@@ -71,9 +71,9 @@ public class queue {
 }
 class Node
 {
-    int data;
+    String data;
     Node next;
-    Node(int data)
+    Node(String data)
     {
         this.data=data;
         this.next=null;
